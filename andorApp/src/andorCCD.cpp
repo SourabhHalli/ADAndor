@@ -765,6 +765,21 @@ asynStatus AndorCCD::writeInt32(asynUser *pasynUser, epicsInt32 value)
         status = asynError;
       }
     }
+    else if (function == AndorFanMode) {
+      try {
+        asynPrint(this->pasynUserSelf, ASYN_TRACE_FLOW,
+          "%s:%s:, SetFanMode(%d)\n",
+          driverName, functionName, value);
+        checkStatus(SetFanMode(value));
+        // Mirroring as there is no readback
+        setIntegerParam(AndorFanMode_RBV, value);
+      } catch (const std::string &e) {
+        asynPrint(pasynUserSelf, ASYN_TRACE_ERROR,
+          "%s:%s: %s\n",
+          driverName, functionName, e.c_str());
+        status = asynError;
+      }
+    }
     else {
       status = ADDriver::writeInt32(pasynUser, value);
     }
