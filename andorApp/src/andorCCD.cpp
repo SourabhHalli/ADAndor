@@ -161,6 +161,7 @@ AndorCCD::AndorCCD(const char *portName, const char *installPath, int cameraSeri
   createParam(AndorVerticalShiftPeriodString,     asynParamInt32, &AndorVerticalShiftPeriod);
   createParam(AndorVerticalShiftAmplitudeString,  asynParamInt32, &AndorVerticalShiftAmplitude);
   createParam(AndorFanModeString,                 asynParamInt32, &AndorFanMode);
+  createParam("ANDOR_FAN_MODE_RBV", asynParamInt32, &AndorFanMode_RBV);
 
 
 
