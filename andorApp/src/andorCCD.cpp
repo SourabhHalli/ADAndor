@@ -160,6 +160,8 @@ AndorCCD::AndorCCD(const char *portName, const char *installPath, int cameraSeri
   createParam(AndorFrameTransferModeString,       asynParamInt32, &AndorFrameTransferMode);
   createParam(AndorVerticalShiftPeriodString,     asynParamInt32, &AndorVerticalShiftPeriod);
   createParam(AndorVerticalShiftAmplitudeString,  asynParamInt32, &AndorVerticalShiftAmplitude);
+  createParam(AndorFanModeString,                 asynParamInt32, &AndorFanMode);
+
 
 
   // Create the epicsEvent for signaling to the status task when parameters should have changed.

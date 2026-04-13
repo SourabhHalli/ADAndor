@@ -470,3 +470,25 @@ record(mbbi, "$(P)$(R)ColorMode_RBV")
 {
     field(DISA, "1")
 }
+
+record(mbbo, "$(P)$(R)FanMode") {
+    field(DTYP, "asynInt32")
+    field(OUT,  "@asyn($(PORT),0,0)ANDOR_FAN_MODE")
+    field(ZRST, "Full")
+    field(ONST, "Low")
+    field(TWST, "Off")
+    field(ZRVL, "0")
+    field(ONVL, "1")
+    field(TWVL, "2")
+}
+
+record(mbbi, "$(P)$(R)FanMode_RBV") {
+    field(DTYP, "asynInt32")
+    field(INP,  "@asyn($(PORT),0,0)ANDOR_FAN_MODE_RBV")
+    field(ZRST, "Full")
+    field(ONST, "Low")
+    field(TWST, "Off")
+    field(ZRVL, "0")
+    field(ONVL, "1")
+    field(TWVL, "2")
+}
