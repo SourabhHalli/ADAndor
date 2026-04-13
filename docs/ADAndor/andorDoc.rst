@@ -391,6 +391,14 @@ those in asynNDArrayDriver.h and ADDriver.h.
     - ANDOR_VS_PERIOD
     - AndorVSPeriod, AndorVSPeriod_RBV
     - mbbo, mbbi
+
+    * - Selects the Andor Fan mode. Choices are:
+      Full
+      Low
+      Off
+    - ANDOR_FAN_MODE
+    - AndorFanMode, AndorFanMode_RBV
+    - mbbo, mbbi
  
 
 Unsupported standard driver parameters
