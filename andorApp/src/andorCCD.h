@@ -119,8 +119,7 @@ class AndorCCD : public ADDriver {
   int AndorVerticalShiftPeriod;
   int AndorVerticalShiftAmplitude;
   int AndorFanMode;
-  int AndorFanMode_RBV;
-#define LAST_ANDOR_PARAM AndorFanMode_RBV
+#define LAST_ANDOR_PARAM AndorFanMode
 
  private:
 
