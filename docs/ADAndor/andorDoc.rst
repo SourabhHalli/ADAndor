@@ -398,7 +398,7 @@ those in asynNDArrayDriver.h and ADDriver.h.
       - Low
       - Off
     - ANDOR_FAN_MODE
-    - AndorFanMode, AndorFanMode_RBV
+    - AndorFanMode
     - mbbo, mbbi
 
 Unsupported standard driver parameters

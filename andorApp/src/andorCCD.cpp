@@ -161,7 +161,6 @@ AndorCCD::AndorCCD(const char *portName, const char *installPath, int cameraSeri
   createParam(AndorVerticalShiftPeriodString,     asynParamInt32, &AndorVerticalShiftPeriod);
   createParam(AndorVerticalShiftAmplitudeString,  asynParamInt32, &AndorVerticalShiftAmplitude);
   createParam(AndorFanModeString,                 asynParamInt32, &AndorFanMode);
-  createParam("ANDOR_FAN_MODE_RBV",               asynParamInt32, &AndorFanMode_RBV);
 
 
 
@@ -774,8 +773,6 @@ asynStatus AndorCCD::writeInt32(asynUser *pasynUser, epicsInt32 value)
           "%s:%s:, SetFanMode(%d)\n",
           driverName, functionName, value);
         checkStatus(SetFanMode(value));
-        // Mirroring as there is no readback
-        setIntegerParam(AndorFanMode_RBV, value);
       } catch (const std::string &e) {
         asynPrint(pasynUserSelf, ASYN_TRACE_ERROR,
           "%s:%s: %s\n",

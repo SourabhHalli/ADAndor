@@ -492,6 +492,6 @@ record(mbbi, "$(P)$(R)AndorFanMode_RBV") {
     field(ZRVL, "0")
     field(ONVL, "1")
     field(TWVL, "2")
-    field(INP,  "@asyn($(PORT),$(ADDR),$(TIMEOUT))ANDOR_FAN_MODE_RBV")
+    field(INP,  "@asyn($(PORT),$(ADDR),$(TIMEOUT))ANDOR_FAN_MODE")
     field(SCAN, "I/O Intr")
 }
